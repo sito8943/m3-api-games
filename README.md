@@ -62,8 +62,18 @@ Response:
 
 Draws a random playing card from a standard 52‑card set.
 
+Optional query params for filtering:
+
+- `suit`: filter by suit. Accepts `s|h|d|c` or `spades|hearts|diamonds|clubs` (case‑insensitive).
+- `min`, `max`: filter by rank range. Accepts `A,2..10,J,Q,K` or numeric equivalents `1,11,12,13`.
+
+Examples:
+
 ```bash
-curl http://localhost:3000/draw
+curl "http://localhost:3000/draw"               # any card
+curl "http://localhost:3000/draw?suit=hearts"   # any heart
+curl "http://localhost:3000/draw?min=8&max=K"   # 8..K of any suit
+curl "http://localhost:3000/draw?suit=s&min=J"  # J..K..A of spades
 ```
 
 Response:
