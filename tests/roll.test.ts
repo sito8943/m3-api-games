@@ -1,8 +1,5 @@
 import request from "supertest";
-import { createTestApp } from "./utils.js";
-import { RollRouter } from "../src/routers/index.js";
-
-const app = createTestApp(RollRouter);
+import app from "./app.js";
 
 describe("GET /roll", () => {
   it("should return a number between 1 and 6 by default", async () => {
