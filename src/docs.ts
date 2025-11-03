@@ -37,6 +37,18 @@ export const docsHtml = `
     <div class="endpoint">
       <div><span class="method">GET</span> <code>/draw</code></div>
       <p>Draws a random playing card from a standard 52-card set.</p>
+      <p>Optional query params for filtering:</p>
+      <ul>
+        <li><code>suit</code>: filter by suit. Accepts <code>s|h|d|c</code> or <code>spades|hearts|diamonds|clubs</code> (case-insensitive).</li>
+        <li><code>min</code>, <code>max</code>: filter by rank range. Accepts <code>A,2..10,J,Q,K</code> or numeric equivalents <code>1,11,12,13</code>.</li>
+      </ul>
+      <p>Examples:</p>
+      <pre>
+/draw
+/draw?suit=hearts
+/draw?min=8&amp;max=K
+/draw?suit=s&amp;min=J
+      </pre>
       <p>Response:</p>
       <pre>{
   "rank": "Q",
