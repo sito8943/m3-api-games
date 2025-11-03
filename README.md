@@ -54,8 +54,8 @@ curl "http://localhost:3000/roll?faces=10"
 
 Response:
 
-```json
-{ "faces": 6, "value": 3 }
+```text
+3
 ```
 
 ### GET /draw
@@ -89,8 +89,8 @@ curl "http://localhost:3000/flip?a=H&b=T"
 
 Response:
 
-```json
-{ "faces": ["head", "tails"], "value": "head" }
+```text
+"head"
 ```
 
 ## Project Structure
