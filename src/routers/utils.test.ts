@@ -1,5 +1,5 @@
 import { describe, it, expect } from "@jest/globals";
-import { Suits, Ranks } from "../src/routers/types.js";
+import { Suits, Ranks } from "./types.js";
 import {
   parseSuit,
   parseRank,
@@ -7,7 +7,7 @@ import {
   rankToValue,
   valueToRank,
   SUIT_EMOJI_MAP,
-} from "../src/routers/utils.js";
+} from "./utils.js";
 
 describe("draw utils", () => {
   it("parses suits and maps to emoji", () => {
